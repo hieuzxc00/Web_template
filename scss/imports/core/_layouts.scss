@@ -16,10 +16,11 @@ body {
     width: 100%;
     max-width: $container-max-width;
     margin: auto;
-    @include text(var(--body16-fs), ir, var(--body16-lh), $white-cl); // tuỳ chỉnh
-    background: #05060f linear-gradient(0deg,rgba(216,236,248,.06),rgba(152,192,239,.06));
+    @include text(var(--body16-fs), mr, var(--body16-lh), $black-cl);
+    background: $bg-cl;
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
     .container-fluid {
         width: 100%;
         padding-right: var(--gap);
@@ -61,9 +62,11 @@ body {
     }
 
     .mainwrapper {
+        position: relative;
         width: 100%;
         margin: auto;
         @include visible;
+        z-index: 2;
     }
     @include lg {
         // CSS responsive large desktop
